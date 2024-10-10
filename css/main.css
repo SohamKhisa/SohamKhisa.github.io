@@ -317,6 +317,12 @@ nav {
   height: 45px !important;
 }
 
+.listspacing {
+  margin-top: 4rem !important;
+  margin-bottom: 1.5rem;
+}
+
+
 #link-to-docs,
 #link-to-teaching-philosophy {
   color: #1585cf;
