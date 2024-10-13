@@ -1,0 +1,1 @@
+Please follow this link you somehow fail to deploy your portfolio <a href="https://stackoverflow.com/questions/62442634/how-do-i-fix-404-error-on-github-pages-for-a-personal-page-im-creating">stackoverflow</a>
