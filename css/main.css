@@ -10,6 +10,18 @@ body {
   color: #20364c !important;
 }
 
+.dark-teal {
+  color: darkslategray
+}
+
+.steel-blue{
+  color: #6A82A8
+}
+
+.navy-blue{
+  color: #2D5987
+}
+
 #badge-more {
   background-color: #1585cf;
   color: white;
@@ -71,11 +83,12 @@ h2, h3 {
   color: slategray;
 }
 
-h4 {
+.h4-setup {
   text-transform: uppercase;
+  color: #2D5987
 }
 
-h4, h5, h6 {
+h6 {
   color: slategray !important;
 }
 
