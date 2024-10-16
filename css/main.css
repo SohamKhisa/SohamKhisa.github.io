@@ -190,6 +190,21 @@ nav {
   padding-bottom: 2rem;
 }
 
+/*The below .navbar and body controls the navbar position*/
+/*The navbar remains fixed in its position even after scrolling down the page*/
+.navbar {
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0; /* Position it at the top of the viewport */
+  width: 100%; /* Ensure it takes the full width */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+body {
+  padding-top: 102px; /* Adjust this to match the height of your navbar */
+}
+
+
+
 .navbar-default .navbar-nav>li>a {
   color: #20364c;
   font-weight: 500;
