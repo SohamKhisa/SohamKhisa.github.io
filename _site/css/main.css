@@ -197,6 +197,7 @@ nav {
   top: 0; /* Position it at the top of the viewport */
   width: 100%; /* Ensure it takes the full width */
   z-index: 1000; /* Ensure it stays above other content */
+  border-radius: 0;
 }
 
 body {
@@ -291,9 +292,9 @@ body {
   color: white;
 }
 
-.navbar {
+/* .navbar {
   border-radius: 0;
-}
+} */
 
 .active {
   /* background: white; */
