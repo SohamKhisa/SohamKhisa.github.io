@@ -87,3 +87,15 @@ $(document).ready(function() {
    });
 
 });
+
+
+function toggleAbstract(btn) {
+    const abstract = btn.nextElementSibling;
+    const isOpen = abstract.classList.contains('visible');
+    abstract.classList.toggle('visible', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    btn.textContent = isOpen ? 'Show description' : 'Hide description';
+    // Re-prepend the arrow via class (textContent wipes it, so use a span approach)
+    // The ::before pseudo handles the arrow, textContent only changes label:
+    btn.dataset.label = btn.textContent;
+  }
