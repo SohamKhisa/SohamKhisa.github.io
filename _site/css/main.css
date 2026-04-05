@@ -908,3 +908,78 @@ body.dark-mode .pub-item {
 body.dark-mode .pub-item:last-child {
   border-bottom-color: #30363d;
 }
+
+
+
+
+
+
+/* ===================================================================*/
+/* ================ RESEARCH SECTION IMAGE ALIGNMENT =================*/
+/* ===================================================================*/
+.research-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 1.5rem;
+}
+
+.research-text {
+  flex: 1;
+}
+
+.research-image img {
+  max-width: 700px;
+  height: auto;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .research-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .research-image img {
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================ */
+/* ANNOUNCEMENT CARD ABOUT SECTION */
+/* ============================================ */
+
+/* .announcement-card {
+  background: rgba(21, 133, 207, 0.08);
+  border: 1px solid rgba(21, 133, 207, 0.25);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 1.8rem;
+  backdrop-filter: blur(6px);
+}
+
+.announcement-text {
+  font-size: 1.45rem;
+  color: #2D5987;
+} */
+
+.announcement-card {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.4);
+  border-left: 4px solid #FFC107;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 1.8rem;
+}
+
+.announcement-text {
+  color: #856404;
+}
+
+.announcement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
