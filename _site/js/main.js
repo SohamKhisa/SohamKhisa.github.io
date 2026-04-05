@@ -99,3 +99,74 @@ function toggleAbstract(btn) {
     // The ::before pseudo handles the arrow, textContent only changes label:
     btn.dataset.label = btn.textContent;
   }
+
+
+function toggledescription(btn) {
+    const abstract = btn.nextElementSibling;
+    const isOpen = abstract.classList.contains('visible');
+    abstract.classList.toggle('visible', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    btn.textContent = isOpen ? 'Show description' : 'Hide description';
+    // Re-prepend the arrow via class (textContent wipes it, so use a span approach)
+    // The ::before pseudo handles the arrow, textContent only changes label:
+    btn.dataset.label = btn.textContent;
+  }
+
+
+
+  // ================================== -->
+  // ======== Dark mode toggle ========//
+  // ==================================
+
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+
+  const icon = document.getElementById('theme-toggle-icon');
+  const toggle = document.getElementById('theme-toggle');
+
+  if (icon) {
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+  }
+
+  if (toggle) {
+    toggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+}
+
+function initThemeToggle() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return false;
+
+  if (!toggle.dataset.bound) {
+    toggle.dataset.bound = 'true';
+
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(newTheme);
+    });
+  }
+
+  return true;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  applyTheme(localStorage.getItem('theme') || 'light');
+
+  let attempts = 0;
+  const interval = setInterval(function() {
+    const initialized = initThemeToggle();
+    attempts += 1;
+
+    if (initialized || attempts > 20) {
+      clearInterval(interval);
+    }
+  }, 200);
+});

@@ -698,3 +698,213 @@ dd {
     height: 14px;
     flex-shrink: 0;
   }
+
+
+
+
+  /* Projects page cards */
+.project-list {
+  padding-left: 2.8rem;
+  margin-top: 2rem;
+}
+
+.project-list > li {
+  margin-bottom: 2.2rem;
+}
+
+.project-card {
+  margin-top: 1rem;
+  padding: 1.8rem 2rem;
+  border: 1px solid rgba(106, 130, 168, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(32, 54, 76, 0.10);
+  border-color: rgba(106, 130, 168, 0.5);
+}
+
+.project-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 1rem;
+}
+
+.project-card-content img {
+  width: 170px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.project-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .project-card-content {
+    flex-direction: column;
+  }
+
+  .project-card-content img {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+
+
+
+/* ==================== */
+/* Dark mode styles */
+/* ==================== */
+/* Theme toggle button */
+.theme-toggle-link {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+}
+
+.theme-toggle-link i {
+  font-size: 1.8rem;
+}
+
+/* Smooth transitions */
+body,
+.navbar,
+.container,
+.panel,
+.project-card,
+table,
+td,
+p,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Dark mode base */
+body.dark-mode {
+  background: #121212;
+  color: #e6e6e6;
+}
+
+/* Typography */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode td,
+body.dark-mode dt,
+body.dark-mode dd,
+body.dark-mode blockquote,
+body.dark-mode #title,
+body.dark-mode #program,
+body.dark-mode .university {
+  color: #e6e6e6 !important;
+}
+
+/* Section line headers */
+body.dark-mode h3 span {
+  background-color: #121212;
+}
+
+body.dark-mode h3:after {
+  border-top: 2px solid #5f6b7a;
+}
+
+/* Main links */
+body.dark-mode #main-container a,
+body.dark-mode #link-to-docs,
+body.dark-mode #link-to-teaching-philosophy {
+  color: #7db7ff;
+}
+
+body.dark-mode #main-container a:hover {
+  color: #9bc9ff;
+  border-bottom: 1px dashed #9bc9ff;
+}
+
+/* Navbar */
+body.dark-mode .navbar-inverse {
+  background: #1b2430;
+  border-color: #1b2430;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-inverse .navbar-nav > li > a {
+  color: #f2f2f2 !important;
+}
+
+body.dark-mode .nav .montserrat:hover,
+body.dark-mode .nav .montserrat:focus,
+body.dark-mode .nav .montserrat:focus-within,
+body.dark-mode .navbar-inverse .navbar-nav > li > a:hover,
+body.dark-mode .navbar-inverse .navbar-nav > li > a:focus {
+  background: #2a3442 !important;
+  color: #ffffff !important;
+}
+
+/* Tables and cards */
+body.dark-mode .table > tbody > tr > td,
+body.dark-mode .table > tbody > tr > th {
+  border-top: 1px solid #30363d;
+}
+
+body.dark-mode iframe,
+body.dark-mode .img-thumbnail {
+  border-color: #3a3a3a;
+  background-color: #1b1b1b;
+}
+
+/* Existing panels */
+body.dark-mode .panel,
+body.dark-mode .panel-body,
+body.dark-mode .panel-heading,
+body.dark-mode .panel-footer {
+  background-color: #1c1f26 !important;
+  color: #e6e6e6 !important;
+  border-color: #323844 !important;
+}
+
+/* Project cards if you add them */
+body.dark-mode .project-card {
+  background: rgba(28, 31, 38, 0.92);
+  border-color: rgba(125, 183, 255, 0.18);
+  box-shadow: none;
+}
+
+body.dark-mode .project-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  border-color: rgba(125, 183, 255, 0.35);
+}
+
+/* Back to top button */
+body.dark-mode #topper {
+  background-color: #2d6fb7;
+}
+
+/* News / lists / subtle separators */
+body.dark-mode .listspacing,
+body.dark-mode .pub-item {
+  border-top-color: #30363d;
+}
+
+body.dark-mode .pub-item:last-child {
+  border-bottom-color: #30363d;
+}
